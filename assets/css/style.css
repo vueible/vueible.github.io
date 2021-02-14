@@ -1,0 +1,293 @@
+
+
+html {
+    min-height: 100%;
+    position:relative;
+}
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(
+      168.3deg,
+      rgba(233, 30, 99, 0.25) 20%,
+      rgba(25, 57, 102, 0.25) 65%),
+    #19488a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: none;
+}
+
+.mobileWrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* We tell all items to be 100% width, via flex-basis */
+.mobileWrapper > * {
+  flex: 1 100%;
+}
+
+/* We rely on source order for mobile-first approach
+       * in this case:
+       * 1. header
+       * 2. article
+       * 3. aside 1
+       * 4. aside 2
+       * 5. footer
+       */
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .aside {
+    flex: 1 auto;
+  }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+         * And tell the main element to take twice as much width as the other two sidebars 
+         */
+  .main {
+    flex: 2 0px;
+  }
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+}
+
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 300;
+  min-height: 95px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+  
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-family: "Amiko", sans-serif;
+  font-weight: 300;
+  max-width: 1080px;
+  min-height: 95px;
+  margin: 0 auto;
+}
+/*header .navItems {
+    max-width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    color: white;
+
+}*/
+
+
+header .login {
+    font-weight: 700;
+    color: teal;
+}
+nav .navItems a {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+    
+}
+.navItems a:hover {
+  background: #1565c0;
+}
+@media all and (max-width: 800px) {
+  .navItems {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navItems {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navItems a {
+    text-align: center;
+    padding: 1px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .naviItems li:last-of-type a {
+    border-bottom: none;
+  }
+}
+header nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  position: static;
+margin-left: auto;
+  right: 89.13%;
+  margin-right: 20px;
+}
+
+header nav .logoText {
+  display: flex;
+  justify-content: flex-start;
+  position: static;
+  width: 82px;
+  height: 30px;
+  left: 50px;
+   margin-right: 20px;
+  font-family: Signika Negative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height:24px;
+  /* identical to box height */
+
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+main .container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  max-height: 800px;
+  max-width: auto; 
+}
+
+main .hero-graghic {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 3; /* default 0 */
+}
+main .hero-image {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 4; /* default 0 */
+  position: absolute;
+  max-height: 45rem;
+  max-width: 45rem;
+  margin-left: 50rem;
+  margin-right: 5rem;
+  top: 15rem;
+  border-radius: 25px;
+  background-size: cover;
+  overflow: hidden;
+  opacity: 100;
+  z-index: 1;
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+}
+
+main .bg-img {
+    /* background-image: url('/patternpad.svg');*/
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  max-width: 795.33px;
+  max-height: 565.2px;
+  margin-left: 45rem;
+  margin-right: 75px;
+  top: 140.62px;
+  transform: rotate(-0.26deg);
+  overflow: hidden;
+  background-position: right;
+  background-size: cover;
+  opacity: 100;
+  backface-visibility:hidden;
+}
+
+main .title {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  font-style: semibold;
+  max-height: 11.87rem;
+  max-width: 42.625rem;
+  position: relative;
+  margin-left: 5rem;
+  top: 173px;
+  border-radius: 25px;
+  line-height: 4rem;
+  color: white;
+
+}
+
+main .subtitle {
+    display: flex;
+  font-family: "Amiko", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  position: absolute;
+  max-height: 151px;
+  max-width: 588px;
+  margin-left: 5rem;
+  top: 362px;
+  color: white;
+  line-height: 2rem;
+  padding-top: 4rem;
+  justify-content: center;
+}
+main .btn-primary {
+    display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: #08cda3;
+  border-radius: 12px;
+  padding: 8px 24px;
+  position: absolute;
+  margin-top: 22rem;
+  margin-left: 5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  opacity: .95;
+  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.btn-primary:hover {
+    opacity: 1; 
+  /*background: rgba(0, 0, 0, 0.16); */
+}
+main .button-text {
+  display: flex;
+  position: static;
+  color: white;
+  font-style: bold;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+footer {
+    position: relative;
+    margin-top: 800px; 
+}
