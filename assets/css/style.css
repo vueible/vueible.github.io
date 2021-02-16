@@ -15,6 +15,7 @@ body {
   max-height: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 h1 {
@@ -22,6 +23,7 @@ h1 {
   max-width: fit-content;
   width: 40%;
   min-width: 35%;
+  justify-content: space-around 20px;
 }
 h2 {
   width: 100%;
@@ -30,15 +32,15 @@ h2 {
   min-width: 25%;
 }
 
-/* .mobileWrapper {
+.mobileWrapper {
   display: flex;
-  flex-flow: row wrap;
-} */
+  flex-flow: wrap;
+} 
 
 /* We tell all items to be 100% width, via flex-basis */
-/* .mobileWrapper > * {
+ .mobileWrapper > * {
   flex: 1 100%;
-} */
+}
 
 /* We rely on source order for mobile-first approach
        * in this case:
@@ -124,23 +126,22 @@ main .container {
 main .hero-bg-grp {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 3; /* default 0 */
+  width: 100%;
 }
 main .hero-img {
-  display: flex;
+  /* display: flex;
   justify-content: flex-end;
-  flex-grow: 4; /* default 0 */
+  flex-grow: 4; default 0 */
   position: absolute;
-  max-height: 100%;
-
+  /* max-height: 100%; */
   margin-left: 50rem;
   margin-right: 5rem;
-  top: 15rem;
+  top: 22rem;
   border-radius: 25px;
-  background-size: cover;
   overflow: hidden;
   opacity: 100;
   z-index: 1;
+  max-width: 50%;
   filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
 }
 
@@ -149,11 +150,11 @@ main .bg-img {
   display: flex;
   flex-direction: row-reverse;
   position: absolute;
-  max-width: 795.33px;
+  max-width: 50%;
   max-height: 565.2px;
   margin-left: 45rem;
   margin-right: 75px;
-  top: 140.62px;
+  top: 21rem;
   transform: rotate(-0.26deg);
   overflow: hidden;
   background-position: right;
@@ -165,28 +166,33 @@ main .bg-img {
 main .title {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   font-family: "Signika Negative", sans-serif;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 600;
   font-style: semibold;
   max-height: 11.87rem;
-  max-width: 42.625rem;
+  max-width: 850px;
+  min-width: 850px;
   position: relative;
   margin-left: 5rem;
-  top: 173px;
+  /* top: 5rem; */
   border-radius: 25px;
-  line-height: 4rem;
+  line-height: 6rem;
   color: white;
+  z-index: 1;
 }
 
 main .subtitle {
   display: flex;
   font-family: "Amiko", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  line-height: 4em;
   font-weight: 300;
   position: absolute;
   max-height: 151px;
   max-width: 588px;
+  min-width: 500px;
   margin-left: 5rem;
   top: 362px;
   color: white;
@@ -246,20 +252,18 @@ footer {
   margin-top:1rem;
 }
   .nav-menu  {
-    width: 100%;
     justify-content: space-around;
+    flex: 50%
   }
-main {
-  flex-direction: column;
-}
-  main .hero-bg-grp {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 3; /* default 0 */
-  }
-  main .hero-img {
-    flex-direction: column;
-    justify-content: center;
+  .navbar{ 
+    margin-bottom: 0;
+  } 
+  .logo {
+     margin: .25em 0;
+     align-self: left; /* align the logo to the left side of 'flex-container' */
+ }
+
+
 }
 
 /* ****** iPhone X 375x812 ****** */
@@ -300,28 +304,34 @@ main {
     margin: 0;
   }
   main .title {
-    /* display: block; */
+    display: block;
+    align-content: center;
     margin: 0 2rem;
-    font-size: 1.55rem;
-    line-height: 2rem;
-    width: fit-content;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    min-width: 360px;
     position: absolute;
-    margin-top: 8em;
-    order: 1;
+    top: 22rem;
   }
   main .subtitle {
-    /* display: block; */
-    font-size: .75rem;
-    width: fit-content;
+    align-content: center;
+    display: block;
+    max-width: 428px;
+    font-size: 1rem;
     margin: 0 2em;
-    line-height: 1rem;
+    line-height: 1.5rem;
     position: absolute;
-    margin-bottom: 10em;
-    margin-top: 2rem;
+    top: 28rem;
+    margin-top: 1.5rem;
+    font-size: .75rem;
+    min-width: 345px;
+    padding: 0;
+
   }
   .btn-lg {
     display: inline-block;
     position: relative;
+    top: 42rem;
     text-align: center;
     text-decoration: none;
     background: #08cda3;
@@ -335,30 +345,37 @@ main {
     font-size: 1rem;
     font-weight: 600;
     font-family: "Amiko", sans-serif;
-    margin: 0;
+    margin: 2rem 2rem ;
+    
   }
   main .hero-bg-grp {
-    display: flex;
+    display: inline-block;
+    vertical-align: center;
+    position: relative;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
     /* default 0 */
   }
   main .bg-img{
+    display: inline-block;
+    vertical-align: center;
     align-content: center;
     position: absolute;
-    margin-top: em;
     justify-content: flex-start;
     margin: 0 2em;
-    padding-top: 28rem;
+    top: 38rem;
+    max-width: 400px;
 
   
   }
   main .hero-img {
     align-content: center;
     position: absolute;
-    margin-top: em;
+    top: 38rem;
     justify-content: flex-start;
     margin: 0 2em;
-    padding-top: 20rem;
+    max-width: 400px;
+
   }
 }
