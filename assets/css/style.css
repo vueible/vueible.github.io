@@ -3,7 +3,7 @@ html {
   font-family: 'Amiko', sans-serif;
   color: white;
   /* background: linear-gradient(160.62deg, rgba(233, 30, 99, 0.25) 0%, rgba(27, 38, 84, 0.25) 48.19%), #121C43; */
-  background-color: #121C43;
+  background-color: #ffffff;
 }
 body {
   max-height: none;
@@ -177,6 +177,7 @@ main .btn-lg {
 }
 .section-1 {
   display:flex;
+  flex-direction: column;
   justify-content: center;
   background-color: #f5f5f5;
 }
@@ -240,6 +241,49 @@ filter: drop-shadow(0px 4px 45px #F45B69);
   font-size: 1.125rem;
   letter-spacing: .125rem;
 }
+.section-2-wrapper {
+  background-color: #ffffff;
+}
+.section-2{
+  display: flex;
+  margin:  0 5.375rem;
+  background: #121C43;
+box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+}
+.copy-2{
+  flex-direction: row;
+  flex:1;
+}
+.copy-2 .title-2 {
+  font-family: "Signika Negative", sans-serif;
+  max-width: 802px;
+  font-size: 4rem;
+  font-weight: 700;
+  /* background-image: Linear-gradient (rgba(8, 205, 163, 0.8) 50% rgba(#046DFD) 50%;
+    background-color: red;
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+   color: transparent; */
+  margin-left: 122px;
+  width: fit-content;
+  font-size: 72px;
+}
+.copy-2 .subtitle-2 {
+  margin-left: 122px;
+  width: fit-content;
+  /* max-width: 600px; */
+  font-weight: 300;
+  font-size: 1.85rem;
+  line-height: 2.25rem;
+}
+.space-dog{
+  background-image: url('/assets/img/section-2/background.png');
+  background-repeat: no-repeat;
+  margin-top: 4rem;
+}
+
 footer {
   position: relative;
   margin-top: 800px;
