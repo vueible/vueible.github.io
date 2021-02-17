@@ -135,59 +135,6 @@ main .herobox1 {
     position: relative;
     max-width: 40rem;
   }
-/* main .bg-img {
-  display: flex;
-  flex-direction: row-reverse;
-  position: absolute;
-  max-width: 50%;
-  max-height: 565.2px;
-  margin-left: 45rem;
-  margin-right: 75px;
-  top: 21rem;
-  transform: rotate(-0.26deg);
-  overflow: hidden;
-  background-position: right;
-  background-size: cover;
-  opacity: 100;
-  backface-visibility: hidden;
-} */
-
-/* main .title {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-family: "Signika Negative", sans-serif;
-  font-size: 5rem;
-  font-weight: 600;
-  font-style: semibold;
-  max-height: 11.87rem;
-  max-width: 850px;
-  min-width: 850px;
-  position: relative;
-  margin-left: 5rem;
-  border-radius: 25px;
-  line-height: 6rem;
-  color: white;
-  z-index: 1;
-} */
-
-/* main .subtitle {
-  display: flex;
-  font-family: "Amiko", sans-serif;
-  font-size: 1.75rem;
-  line-height: 4em;
-  font-weight: 300;
-  position: absolute;
-  max-height: 151px;
-  max-width: 588px;
-  min-width: 500px;
-  margin-left: 5rem;
-  top: 362px;
-  color: white;
-  line-height: 2rem;
-  padding-top: 4rem;
-  justify-content: center;
-} */
 main .btn-lg {
   
   display: inline-block;
@@ -317,10 +264,10 @@ footer {
   .logo {
      margin: .25em 0;
      align-self: left; align the logo to the left side of 'flex-container' */
- }
+ /* } */
 
 
-}
+/* } */
 
 /* ****** iPhone X 375x812 ****** */
 /* @media all and (max-width: 600px) { */
@@ -332,7 +279,7 @@ footer {
     margin: .25em 0;
     align-self: left; */
      /* align the logo to the left side of 'flex-container' */
-}
+/* } */
   
   /* .nav-menu {
     flex-direction: column;
@@ -345,7 +292,7 @@ footer {
     padding: 10px; */
     /* border-top: 1px solid rgba(255,255,255,0.3); 
     border-bottom: 1px solid rgba(0,0,0,0.1);  */
-  }
+  /* } */
   
   /* .nav-menu li:last-of-type a {
     border-bottom: none;
